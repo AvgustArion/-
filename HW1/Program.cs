@@ -8,10 +8,10 @@ a = max;
 if (a > b)
 {
     max = a;
-    Console.WriteLine($"Наибольшее число {max}");
+    Console.WriteLine($"Наибольшее число: {max}");
 }
 else 
 {
     max = b;
-    Console.WriteLine($"Наибольшее число {max}");
+    Console.WriteLine($"Наибольшее число: {max}");
 }
