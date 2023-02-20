@@ -1,18 +1,21 @@
-﻿// Задача 6: Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
+﻿// Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 
-// 4 -> да
-// -3 -> нет
-// 7 -> нет
+// 6 -> да
+// 7 -> да
+// 1 -> нет
 
 Console.Clear();
-Console.WriteLine("Введите число: ");
-int number = Convert.ToInt32(Console.ReadLine());
-int sum = number % 2;
-if (sum == 0)
+Console.WriteLine("Введите день недели:");
+int day = Convert.ToInt32(Console.ReadLine());
+if ( day > 7)
 {
-    Console.WriteLine($"Число: {number} - чётное.");
+    Console.WriteLine("Ввели не день недели!!!");
 }
-else
+else if (day <= 5)
 {
-    Console.WriteLine($"Число: {number} - не чётное.");
+    Console.WriteLine($"День {day}: не выходной.");
+}
+else 
+{
+    Console.WriteLine($"День {day}: выходной.");
 }
