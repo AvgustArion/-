@@ -1,33 +1,16 @@
-﻿// Задача 4: Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел.
-
-// 2, 3, 7 -> 7
-// 44 5 78 -> 78
-// 22 3 9 -> 22
+﻿// Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+// 645 -> 5
+// 78 -> третьей цифры нет
+// 32679 -> 6
 
 Console.Clear();
-Console.WriteLine("Введите первое число: ");
-int numA = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите второе число: ");
-int numB = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите третье число: ");
-int numC = Convert.ToInt32(Console.ReadLine());
-int max = numA;
-if (numB > numA & numB > numC )
+Console.WriteLine("Введите трёхзначное число число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+int sum = number % 10;
+if (number < 100) 
 {
-    max = numB;
-    Console.WriteLine($"Наибольшее число: {numB}");
-}
-else if (numC> numA & numC > numB)
+    Console.Write("Ввели не трёхзначное число");
+} else 
 {
-    max = numC;
-    Console.WriteLine($"Наибольшее число: {numC}");
-}
-else if (numA > numB & numA > numC )
-{
-    max = numA;
-    Console.WriteLine($"Наибольшее число: {numA}");
-}
-else
-{
-    Console.WriteLine("Наибольшие числа равны!");
+    Console.WriteLine(sum);
 }
